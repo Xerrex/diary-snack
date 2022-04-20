@@ -7,8 +7,6 @@
     <title>My Diary</title>
     <link rel="stylesheet" href="{% static 'css/diary.css' %}">
 </head>
-
-<body>
     <h1><a href="/">Dear diary …</a></h1>
     {% if messages %}
         <ul class="messages">
@@ -19,6 +17,9 @@
     {% endif %}
 
     {% block content %}{% endblock %}
+    
+    <hr>
+    <a href="{% url 'admin:logout' %}"><button>Logout</button></a>
 
 </body>
 
